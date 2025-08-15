@@ -1,0 +1,21 @@
+/* === Navbar (seu CSS, mantido) === */
+.custom-navbar {
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+}
+
+.profile-img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  transition: color 0.3s;
+  &:hover {
+    color: #0d6efd !important;
+  }
+}
