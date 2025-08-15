@@ -1,0 +1,63 @@
+.section-slab {
+  padding: 3rem 0;
+  scroll-margin-top: 84px;
+}
+
+.about-card {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #fff;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.about-title {
+  min-height: 220px;
+  background: #f8f9fa;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.about-content {
+  background: #ffffff;
+}
+
+.about-card:hover {
+  box-shadow: 0 12px 32px rgba(13, 110, 253, 0.18);
+  border-color: rgba(13, 110, 253, 0.35);
+}
+
+/* Tom azulado nas duas colunas quando hover no card */
+.about-card:hover .about-title,
+.about-card:hover .about-content {
+  background: linear-gradient(180deg, rgba(13, 110, 253, 0.08), rgba(13, 110, 253, 0.03));
+}
+
+.about-title h2 {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+/* Responsividade do split */
+@media (max-width: 991.98px) {
+  .about-title {
+    min-height: 160px;
+  }
+  .about-title h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Respeita usuários com movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  .nav-link,
+  .about-card,
+  .about-title,
+  .about-content {
+    transition: none !important;
+  }
+}
