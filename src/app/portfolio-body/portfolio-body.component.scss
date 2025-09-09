@@ -1,12 +1,12 @@
 .hero-section {
-  width: 100%;
+  height: 95vh;
   overflow: hidden;
   background: #0f172a;
 }
 
 .hero-img {
-  width: 100%;
-  height: 70vh;
+  width: 175vh;
+  height: 94.5vh !important;
   object-fit: cover;
   object-position: center;
   display: block;
@@ -15,8 +15,8 @@
 /* Mobile */
 @media (max-width: 576px) {
   .hero-img {
-    height: 52vh;
-    object-position: 50% 35%;
+    height: 50vh;
+    object-position: 50% 50%;
   }
 }
 
@@ -31,17 +31,65 @@
 /* Desktop ≥ LG */
 @media (min-width: 992px) {
   .hero-img {
-    height: 78vh;
+    //height: 65vh; // antes 78vh
   }
 }
 
-/* Telas muito grandes */
 @media (min-width: 1400px) {
   .hero-img {
-    height: 82vh;
+    height: 70vh; // antes 82vh
   }
 }
 
 #sobre, #experiencia, #contato {
   scroll-margin-top: 84px;
+}
+
+.section {
+  text-align: center;
+  padding: 3rem 0;
+
+  h2 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2.2rem);
+  }
+
+  p {
+    margin: 0 auto 1rem auto;
+    max-width: 800px;
+    line-height: 1.65;
+    font-size: clamp(1rem, 0.95rem + 0.3vw, 1.1rem);
+  }
+}
+
+@media (max-width: 576px) {
+  .section { padding: 2.5rem 1rem; }
+}
+
+@media (min-width: 992px) {
+  .section { padding: 4rem 0; }
+}
+
+.section.bg-light {
+  color: #0f172a;
+
+  h2 { color: #0f172a; }
+  p  { color: #27324a; }
+}
+
+/* Links em Contato */
+#contato a {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    opacity: .9;
+    text-decoration: underline;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
 }
