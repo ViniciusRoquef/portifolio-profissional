@@ -1,0 +1,131 @@
+:host { display: block; }
+
+.new-projects-table {
+  border: none;
+  border-radius: none;
+  margin: 0 60px 70px 60px;
+  background: #fff;
+}
+
+.new-projects-table__body {
+  padding: 1.25rem;
+}
+
+.new-projects-table-content-title-table {
+  .new-projects-table__title {
+    font-weight: 700;
+    margin: 0;
+  }
+  small { color: #6c757d; }
+}
+
+.new-projects-table__error-table-empty {
+  text-align: center;
+  color: #6c757d;
+  padding: 2rem 0;
+  border: 1px dashed #dfe3e8;
+  border-radius: 10px;
+}
+
+.new-projects-table__table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.new-projects-table__table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  th, td {
+    padding: .75rem .9rem;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+  td:first-child {
+    white-space: normal;
+  }
+
+  tbody tr:hover {
+    background: #f8f9fa;
+  }
+}
+
+.new-projects-table__table-thead {
+  th {
+    background: #0f172a;
+    color: #fff;
+    border: 0;
+    font-weight: 600;
+  }
+}
+
+.min-col { width: 140px; }
+.fw-500  { font-weight: 500; }
+
+.new-projects-table__btns-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .4rem;
+
+  button {
+    appearance: none;
+    border: 1px solid #d7dbe0;
+    background: #fff;
+    color: #27324a;
+    border-radius: 8px;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .18s ease-in-out;
+    cursor: pointer;
+
+    i { font-size: 1rem; line-height: 1; }
+
+    &:hover { transform: translateY(-1px); }
+    &:active { transform: translateY(0); }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(90,166,216,.18);
+      border-color: #5aa6d8;
+    }
+  }
+
+  .new-projects-table__btns-action--visualizer {
+    border-color: #0dcaf0;
+    color: #0c8ea7;
+
+    &:hover { background: rgba(13, 202, 240, .12); }
+  }
+
+  .new-projects-table__btns-action--edit {
+    border-color: #f0ad4e;
+    color: #b87300;
+
+    &:hover { background: rgba(240, 173, 78, .14); }
+  }
+
+  .new-projects-table__btns-action--exclude {
+    border-color: #dc3545;
+    color: #b02a37;
+
+    &:hover { background: rgba(220, 53, 69, .12); }
+  }
+}
+
+@media (max-width: 576px) {
+  .new-projects-table__body { padding: 1rem; }
+  .min-col { width: 110px; }
+  .new-projects-table__btns-action button {
+    width: 32px; height: 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}

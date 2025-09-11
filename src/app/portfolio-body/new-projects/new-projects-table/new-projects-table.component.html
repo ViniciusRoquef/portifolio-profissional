@@ -1,0 +1,54 @@
+<div class="new-projects-table">
+  <div class="new-projects-table__body">
+    <div class="new-projects-table-content-title-table d-flex align-items-center justify-content-between mb-3">
+      <h5 class="new-projects-table__title mb-0">Projetos</h5>
+      <small class="text-muted">{{ projects.length }} itens</small>
+    </div>
+
+    <div *ngIf="!projects?.length" class="new-projects-table__error-table-empty">
+      Nenhum projeto encontrado.
+    </div>
+
+    <div class="new-projects-table__table-responsive" *ngIf="projects?.length">
+      <table class="new-projects-table__table table-hover align-middle projects-table">
+        <thead class="new-projects-table__table-thead">
+          <tr>
+            <th scope="col">Nome</th>
+            <th scope="col" class="min-col">Status</th>
+            <th scope="col" class="text-center min-col">Ações</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let p of projects; trackBy: trackById">
+            <td class="fw-500">{{ p.name }}</td>
+
+            <td>
+              <span class="badge"
+                [ngClass]="{
+                  'bg-success': p.status === 'ativo',
+                  'bg-warning text-dark': p.status === 'em-andamento',
+                  'bg-secondary': p.status === 'inativo'
+                }">
+                {{ p.status | titlecase }}
+              </span>
+            </td>
+
+            <td class="new-projects-table__btns-action">
+              <button class="new-projects-table__btns-action--visualizer" (click)="onView(p.id)" aria-label="Ver">
+                <i class="bi bi-eye"></i>
+              </button>
+              <button class=" new-projects-table__btns-action--edit" (click)="onEdit(p.id)" aria-label="Editar">
+                <i class="bi bi-pencil"></i>
+              </button>
+              <button class=" new-projects-table__btns-action--exclude" (click)="onRemove(p.id)" aria-label="Excluir">
+                <i class="bi bi-trash"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
