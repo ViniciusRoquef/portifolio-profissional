@@ -1,12 +1,12 @@
 .hero-section {
-  height: 95vh;
+  height: 100vh;
   overflow: hidden;
   background: #0f172a;
 }
 
 .hero-img {
-  width: 175vh;
-  height: 94.5vh !important;
+  width: 99%;
+  height: 100% !important;
   object-fit: cover;
   object-position: center;
   display: block;
@@ -31,7 +31,7 @@
 /* Desktop ≥ LG */
 @media (min-width: 992px) {
   .hero-img {
-    //height: 65vh; // antes 78vh
+    height: 65vh; // antes 78vh
   }
 }
 
@@ -46,21 +46,29 @@
 }
 
 .section {
-  text-align: center;
-  padding: 3rem 0;
-
-  h2 {
-    font-weight: 700;
-    margin-bottom: 1rem;
-    line-height: 1.2;
-    font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2.2rem);
+  .container {
+    display: flex;
+    gap: 2rem;
   }
 
-  p {
-    margin: 0 auto 1rem auto;
-    max-width: 800px;
-    line-height: 1.65;
-    font-size: clamp(1rem, 0.95rem + 0.3vw, 1.1rem);
+  .section-title {
+    flex: 0 0 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+
+  .section-content {
+    flex: 1;
+    text-align: left;
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
   }
 }
 
