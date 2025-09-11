@@ -1,0 +1,35 @@
+<div class="card">
+  <div class="new-projects-filter">
+    <form class="new-projects-filter__form">
+      <div class="new-projects-filter__item">
+        <label for="filterName" class="new-projects-filter__label">Nome do Projeto</label>
+        <input
+          id="filterName"
+          type="text"
+          class="form-control new-projects-filter__input"
+          placeholder="Digite o nome">
+      </div>
+
+      <div class="new-projects-filter__item">
+        <label for="filterStatus" class="new-projects-filter__label">Status</label>
+        <select
+          id="filterStatus"
+          class="form-select new-projects-filter__select">
+          <option value="">Todos</option>
+          <option value="ativo">Concluído</option>
+          <option value="em-andamento">Em Andamento</option>
+          <option value="inativo">Inativo</option>
+        </select>
+      </div>
+
+      <div class="new-projects-filter__actions">
+        <button type="submit" class="btn btn-primary new-projects-filter__iconbtn" aria-label="Filtrar">
+          <i class="bi bi-search"></i>
+        </button>
+        <button type="button" class="btn btn-outline-secondary new-projects-filter__iconbtn" aria-label="Limpar" id="btnClear">
+          <i class="bi bi-x-circle"></i>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
