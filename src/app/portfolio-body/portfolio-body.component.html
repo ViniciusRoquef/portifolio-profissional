@@ -1,50 +1,128 @@
-<section class="hero-section">
-  <img src="assets/img-profile-portfolio.png" alt="Vinicius Roque Full Stack" class="hero-img">
-</section>
+<section class="portfolio-body">
+  <div class="portfolio-body__container">
+    <div class="portfolio-body__grid" style="display: flex; flex-direction: column;">
+      <div>
+        <aside class="portfolio-body__left">
+          <section class="profile-card">
+            <div class="profile-card__banner"></div>
 
-<section id="about" class="section py-5">
-  <div class="container d-flex flex-column flex-md-row align-items-start">
-    <h2 class="section-title">Sobre mim</h2>
-    <div class="section-content">
-      <p>
-        Sou uma pessoa apaixonada por tecnologia, curiosa por natureza e sempre em busca de novos aprendizados. Desde cedo tive o hábito de estudar com dedicação, e isso me levou a concluir minha segunda graduação aos 22 anos de idade, reforçando ainda mais minha vontade de me manter em constante evolução. Acredito que conhecimento é algo que transforma não apenas a carreira, mas também a forma como enxergamos o mundo, por isso busco estar sempre atualizado e aberto a novos desafios que me tirem da zona de conforto.
-      </p>
-      <p>
-        Atualmente moro em João Pessoa, na Paraíba, uma cidade que me inspira pelo equilíbrio entre tranquilidade e movimento, e que contribui para o meu estilo de vida. Gosto de praticar esportes como forma de manter o corpo ativo e a mente saudável, além de explorar hobbies que estimulam minha criatividade e paciência, como o macramê e as aulas de cerâmica fria.
-      </p>
-      <p>
-        Valorizo a troca de conhecimento, a colaboração com pessoas de diferentes áreas e acredito que o trabalho em equipe é fundamental para alcançar resultados consistentes e inovadores. Para mim, crescer como pessoa é tão importante quanto crescer como profissional, e é nesse equilíbrio que encontro motivação para seguir evoluindo em todas as áreas da vida.
-      </p>
-    </div>
-  </div>
-</section>
-<section id="experience" class="section py-5 bg-light">
-  <div class="container d-flex flex-column flex-md-row align-items-start">
-    <h2 class="section-title">Experiência</h2>
-    <div class="section-content">
-      <p>
-        Sou Desenvolvedor Full Stack Pleno com mais 4(Quatro) anos de experiência em projetos de alta complexidade, unindo o front-end em Angular 12+ e TypeScript ao back-end em Java 8/14+ com Spring Boot. Minha trajetória envolve a criação de Single Page Applications (SPA), APIs REST e microserviços, sempre aplicando princípios SOLID e boas práticas de engenharia de software para garantir soluções escaláveis e de alto valor para o negócio.
-      </p>
-      <p>
-        Atuei em projetos desafiadores, como a migração de monólitos para microfrontends, a implementação de testes unitários com Jest e Jasmine e a configuração de pipelines de integração contínua com Azure DevOps. Também tenho experiência em state management, componentização inteligente e estilização avançada com HTML5, CSS3/SASS, Angular Material e NG Bootstrap.
-      </p>
-      <p>
-        Minha rotina profissional é marcada pela colaboração em equipes ágeis com Scrum e Kanban, onde desempenho um papel ativo no alinhamento entre tecnologia e produto, garantindo entregas consistentes e inovadoras. Além disso, venho expandindo meu conhecimento em Vue.js e aprimorando minha base em arquitetura de microserviços e microfrontends, consolidando minha atuação como um profissional completo e adaptável a diferentes contextos.
-      </p>
-    </div>
-  </div>
-</section>
+            <div class="profile-card__avatar"></div>
 
-<app-new-projects id="projects"></app-new-projects>
+            <p class="profile-card__handle">@viniciusroque</p>
 
+            <h1 class="profile-card__title">Oi! Eu sou o Vinicius Roque.</h1>
 
-<section id="contact" class="py-5 bg-dark text-light text-center">
-  <div class="container">
-    <h2 class="mb-4">Entre em contato comigo</h2>
-    <div class="d-flex justify-content-center gap-4">
-      <a href="https://github.com/ViniciusRoquef" target="_blank"><i class="bi bi-github fs-3 text-light"></i></a>
-      <a href="https://www.linkedin.com/in/vinicius-roque-f/" target="_blank"><i class="bi bi-linkedin fs-3 text-light"></i></a>
-      <a href="mailto:viniciusroqf@gmail.com"><i class="bi bi-envelope fs-3 text-light"></i></a>
+            <p class="profile-card__description">
+              Desenvolvedor Front-end focado em Angular, arquitetura e experiência do usuário.
+              Curto construir interfaces escaláveis, organizadas e com cara de produto.
+            </p>
+          </section>
+
+          <section class="tech-section" aria-label="Tecnologias">
+            <h2 class="tech-section__title">TECHNOLOGIES</h2>
+
+            <ul class="tech-section__list">
+              <li class="tech-section__item"><span class="tech-section__chip tech-section__chip--blue">Angular</span></li>
+              <li class="tech-section__item"><span class="tech-section__chip tech-section__chip--blue">TypeScript</span></li>
+              <li class="tech-section__item"><span class="tech-section__chip tech-section__chip--green">RxJS</span></li>
+              <li class="tech-section__item"><span class="tech-section__chip tech-section__chip--purple">SCSS</span></li>
+              <li class="tech-section__item"><span class="tech-section__chip tech-section__chip--gray">Jest/Jasmine</span></li>
+              <li class="tech-section__item"><span class="tech-section__chip tech-section__chip--yellow">Java</span></li>
+              <li class="tech-section__item"><span class="tech-section__chip tech-section__chip--yellow">Spring Boot</span></li>
+              <li class="tech-section__item"><span class="tech-section__chip tech-section__chip--gray">Microfrontends</span></li>
+            </ul>
+          </section>
+
+          <section class="projects-section" aria-label="Projetos (coluna esquerda)">
+            <h2 class="projects-section__title">PROJECTS</h2>
+
+            <article class="project-card">
+              <div class="project-card__media project-card__media--forest"></div>
+              <div class="project-card__content">
+                <h3 class="project-card__name">Projeto A</h3>
+                <p class="project-card__text">
+                  Descrição curta do projeto com foco em entrega e stack usada.
+                </p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card__media project-card__media--mountain"></div>
+              <div class="project-card__content">
+                <h3 class="project-card__name">Projeto B</h3>
+                <p class="project-card__text">
+                  Mais um projeto com uma frase curta e objetiva.
+                </p>
+              </div>
+            </article>
+          </section>
+        </aside>
+      </div>
+
+      <div>
+        <section class="portfolio-body__right">
+          <section class="tech-section tech-section--compact" aria-label="Tecnologias (coluna direita)">
+            <h2 class="tech-section__title">TECHNOLOGIES</h2>
+
+            <ul class="tech-section__list">
+              <li class="tech-section__item"><span class="tech-section__chip tech-section__chip--blue">Angular</span></li>
+              <li class="tech-section__item"><span class="tech-section__chip tech-section__chip--blue">TypeScript</span></li>
+              <li class="tech-section__item"><span class="tech-section__chip tech-section__chip--green">RxJS</span></li>
+              <li class="tech-section__item"><span class="tech-section__chip tech-section__chip--purple">SCSS</span></li>
+              <li class="tech-section__item"><span class="tech-section__chip tech-section__chip--yellow">Java</span></li>
+              <li class="tech-section__item"><span class="tech-section__chip tech-section__chip--yellow">Spring</span></li>
+              <li class="tech-section__item"><span class="tech-section__chip tech-section__chip--gray">Docker</span></li>
+            </ul>
+          </section>
+
+          <section class="projects-section" aria-label="Projetos (coluna direita)">
+            <h2 class="projects-section__title">PROJECTS</h2>
+
+            <article class="project-card project-card--large">
+              <div class="project-card__media project-card__media--forest"></div>
+              <div class="project-card__content">
+                <h3 class="project-card__name">Projeto 1</h3>
+                <p class="project-card__text">
+                  Uma descrição curta estilo “case” como no layout da imagem.
+                </p>
+              </div>
+            </article>
+
+            <article class="project-card project-card--large">
+              <div class="project-card__media project-card__media--mountain"></div>
+              <div class="project-card__content">
+                <h3 class="project-card__name">Projeto 2</h3>
+                <p class="project-card__text">
+                  Outra descrição curta. Pode ter “Ver detalhes”.
+                </p>
+              </div>
+            </article>
+
+            <article class="project-card project-card--large">
+              <div class="project-card__media project-card__media--wood"></div>
+              <div class="project-card__content">
+                <h3 class="project-card__name">Projeto 3</h3>
+                <p class="project-card__text">
+                  Texto simples e direto, bem escaneável.
+                </p>
+              </div>
+            </article>
+          </section>
+
+          <section class="contact-section" aria-label="Contato">
+            <h2 class="contact-section__title">CONTACT</h2>
+            <p class="contact-section__text">
+              Quer trocar uma ideia sobre projetos, vagas ou colaboração? Me chama.
+            </p>
+
+            <div class="contact-section__links">
+              <a class="contact-section__link" href="mailto:seuemail@exemplo.com">Email</a>
+              <a class="contact-section__link" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a class="contact-section__link" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+          </section>
+        </section>
+      </div>
     </div>
   </div>
 </section>

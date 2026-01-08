@@ -1,0 +1,9 @@
+.app-shell {
+    min-height: 100vh; /* importante: permite crescer e dar scroll */
+    display: flex;
+    flex-direction: column;
+
+    &__main {
+        flex: 1 1 auto;
+    }
+}

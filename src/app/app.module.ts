@@ -10,6 +10,7 @@ import { SectionSplitComponent } from './portfolio-body/section-split/section-sp
 import { NewProjectsComponent } from './portfolio-body/new-projects/new-projects.component';
 import { NewProjectsFilterComponent } from './portfolio-body/new-projects/new-projects-filter/new-projects-filter.component';
 import { NewProjectsTableComponent } from './portfolio-body/new-projects/new-projects-table/new-projects-table.component';
+import { PageFooterComponent } from './page-footer/page-footer.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NewProjectsTableComponent } from './portfolio-body/new-projects/new-pro
     SectionSplitComponent,
     NewProjectsComponent,
     NewProjectsFilterComponent,
-    NewProjectsTableComponent
+    NewProjectsTableComponent,
+    PageFooterComponent
   ],
   imports: [
     BrowserModule,

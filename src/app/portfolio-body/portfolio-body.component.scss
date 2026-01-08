@@ -1,104 +1,217 @@
-.hero-section {
-  height: 100vh;
-  overflow: hidden;
-  background: #0f172a;
-}
+.portfolio-body {
+  padding: 28px 20px;
 
-.hero-img {
-  width: 99%;
-  height: 100% !important;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-
-/* Mobile */
-@media (max-width: 576px) {
-  .hero-img {
-    height: 50vh;
-    object-position: 50% 50%;
+  &__container {
+    max-width: 1080px;
+    margin: 0 auto;
   }
-}
 
-/* Tablet */
-@media (min-width: 577px) and (max-width: 991px) {
-  .hero-img {
-    height: 60vh;
-    object-position: center;
-  }
-}
-
-/* Desktop ≥ LG */
-@media (min-width: 992px) {
-  .hero-img {
-    height: 65vh; // antes 78vh
-  }
-}
-
-@media (min-width: 1400px) {
-  .hero-img {
-    height: 70vh;
-  }
-}
-
-#sobre, #experiencia, #contato {
-  scroll-margin-top: 84px;
-}
-
-.section {
-  .container {
+  &__grid {
     display: flex;
-    padding-top: 30px;
-    gap: 2rem;
+    gap: 28px;
+    align-items: start;
   }
 
-  .section-title {
-    flex: 0 0 220px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  &__left,
+  &__right {
+    flex-direction:column;
+    gap: 18px;
+  }
+}
+
+.profile-card {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(36, 48, 69, 0.55);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.35);
+
+  &__banner {
+    height: 120px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(96, 165, 250, 0.35), rgba(52, 211, 153, 0.15));
+    border: 1px solid rgba(36, 48, 69, 0.5);
+  }
+
+  &__avatar {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    margin: -44px auto 0;
+    background: radial-gradient(circle, rgba(230, 237, 246, 0.2), rgba(96, 165, 250, 0.15));
+    border: 3px solid rgba(11, 15, 20, 0.9);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.45);
+  }
+
+  &__handle {
+    margin: 10px 0 0;
     text-align: center;
-    font-weight: 700;
-    font-size: 1.8rem;
+    font-size: 12px;
+    color: #a7b1c2;
   }
 
-  .section-content {
-    flex: 1;
-    text-align: left;
-    p {
-      margin-bottom: 1rem;
-      line-height: 1.6;
-      font-size: 1rem;
+  &__title {
+    margin: 10px 0 0;
+    text-align: center;
+    font-size: 18px;
+    color: #e6edf6;
+    font-weight: 800;
+  }
+
+  &__description {
+    margin: 10px auto 0;
+    max-width: 36ch;
+    text-align: center;
+    font-size: 13px;
+    color: #a7b1c2;
+    line-height: 1.6;
+  }
+}
+
+/* Technologies (chips) */
+.tech-section {
+  background: rgba(17, 24, 39, 0.55);
+  border: 1px solid rgba(36, 48, 69, 0.55);
+  border-radius: 16px;
+  padding: 16px;
+
+  &__title {
+    margin: 0 0 12px;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    color: #a7b1c2;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    border: 1px solid rgba(36, 48, 69, 0.55);
+    color: #e6edf6;
+    background: rgba(22, 32, 51, 0.6);
+
+    &--blue { background: rgba(96, 165, 250, 0.12); border-color: rgba(96, 165, 250, 0.25); }
+    &--green { background: rgba(52, 211, 153, 0.10); border-color: rgba(52, 211, 153, 0.22); }
+    &--purple { background: rgba(167, 139, 250, 0.10); border-color: rgba(167, 139, 250, 0.22); }
+    &--yellow { background: rgba(251, 191, 36, 0.09); border-color: rgba(251, 191, 36, 0.22); }
+    &--gray { background: rgba(148, 163, 184, 0.08); border-color: rgba(148, 163, 184, 0.2); }
+  }
+}
+
+/* Projects section */
+.projects-section {
+  background: rgba(17, 24, 39, 0.55);
+  border: 1px solid rgba(36, 48, 69, 0.55);
+  border-radius: 16px;
+  padding: 16px;
+
+  &__title {
+    margin: 0 0 12px;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    color: #a7b1c2;
+  }
+}
+
+/* Project card */
+.project-card {
+  display: flex;
+  gap: 12px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(36, 48, 69, 0.55);
+  background: rgba(22, 32, 51, 0.55);
+  margin-top: 12px;
+
+  &__media {
+    width: 120px;
+    min-height: 72px;
+    background-size: cover;
+    background-position: center;
+
+    &--forest { background-image: linear-gradient(135deg, rgba(52,211,153,0.18), rgba(0,0,0,0.2)); }
+    &--mountain { background-image: linear-gradient(135deg, rgba(96,165,250,0.18), rgba(0,0,0,0.2)); }
+    &--wood { background-image: linear-gradient(135deg, rgba(251,191,36,0.12), rgba(0,0,0,0.2)); }
+  }
+
+  &__content {
+    padding: 10px 12px;
+  }
+
+  &__name {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: #e6edf6;
+  }
+
+  &__text {
+    margin: 6px 0 0;
+    font-size: 12px;
+    color: #a7b1c2;
+    line-height: 1.5;
+  }
+
+  &--large {
+    .project-card__media {
+      width: 160px;
+      min-height: 86px;
     }
   }
 }
 
-@media (max-width: 576px) {
-  .section { padding: 2.5rem 1rem; }
-}
+/* Contact */
+.contact-section {
+  background: rgba(17, 24, 39, 0.55);
+  border: 1px solid rgba(36, 48, 69, 0.55);
+  border-radius: 16px;
+  padding: 16px;
 
-@media (min-width: 992px) {
-  .section { padding: 4rem 0; }
-}
+  &__title {
+    margin: 0 0 10px;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    color: #a7b1c2;
+  }
 
-.section.bg-light {
-  color: #0f172a;
+  &__text {
+    margin: 0 0 12px;
+    font-size: 13px;
+    color: #a7b1c2;
+    line-height: 1.6;
+  }
 
-  h2 { color: #0f172a; }
-  p  { color: #27324a; }
-}
+  &__links {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
 
-/* Links em Contato */
-#contato a {
-  text-decoration: none;
+  &__link {
+    font-size: 13px;
+    color: #e6edf6;
+    text-decoration: none;
 
-  &:hover,
-  &:focus {
-    opacity: .9;
-    text-decoration: underline;
+    &:hover {
+      color: #60a5fa;
+    }
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  * { transition: none !important; }
+/* Responsive: vira 1 coluna */
+@media (max-width: 900px) {
+  .portfolio-body__grid {
+    grid-template-columns: 1fr;
+  }
 }
